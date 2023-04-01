@@ -1,0 +1,27 @@
+body {
+    background-color: #F2F2F2;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+  }
+  
+  .btn-primary {
+    background-color: #6C63FF;
+    border-color: #6C63FF;
+  }
+  
+  .btn-primary:hover {
+    background-color: #5B54E9;
+    border-color: #5B54E9;
+  }
+  
+  .form-control:focus {
+    border-color: #6C63FF;
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+  }
+
