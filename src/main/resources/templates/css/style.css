@@ -20,6 +20,7 @@ body {
     border-color: #5B54E9;
   }
   
+  /* Focus textbox while are focosing */
   .form-control:focus {
     border-color: #6C63FF;
     box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
