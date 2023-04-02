@@ -1,5 +1,12 @@
 package com.microservicetest.microservice.data;
 
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.microservicetest.microservice.utils.LocalDateAdapter;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class User {
     private Long id;
     private String key;
@@ -13,13 +20,40 @@ public class User {
     public enum UserType { //Creando nuestro tipo de dato, con un enum. Conjunto de constantes.
         ADMIN, AGENTE, PROMOTOR
     }
+    @SerializedName("startSession")
+    @JsonAdapter(LocalDateAdapter.class)
     private LocalDate startSession;
+    @SerializedName("endSession")
+    @JsonAdapter(LocalDateAdapter.class)
     private LocalDate endSession;
+
+    //To print eache propertie whiler are debbugging
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", key='" + key + '\'' +
+                ", type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", fatherLastname='" + fatherLastname + '\'' +
+                ", motherLastname='" + motherLastname + '\'' +
+                ", password='" + password + '\'' +
+                ", userType=" + userType +
+                ", startSession=" + startSession +
+                ", endSession=" + endSession +
+                ", onlineTime=" + onlineTime +
+                ", status=" + status +
+                '}';
+    }
+
+    @SerializedName("onlineTime")
+    @JsonAdapter(LocalDateAdapter.class)
     private LocalDate onlineTime;
     private Status status;
 
     public enum Status {
-        ONLINE, OPFLINE
+        ONLINE, OFFLINE
     }
 
     // getters y setters: métodos que van a acceder a las variables, solo estos. Encapsulamiento
