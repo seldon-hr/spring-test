@@ -26,3 +26,9 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
   }
 
+
+  .red {
+    background-color: coral;
+    height: 300px;
+    width: inherit;
+  }
