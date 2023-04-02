@@ -1,3 +1,8 @@
+const API_URL = "./scripts/array.json";
+
+
 $(document).ready(function () {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        ajax: API_URL,
+    });
 });
