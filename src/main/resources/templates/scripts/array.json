@@ -1,0 +1,95 @@
+{
+  "data": [
+    [
+      123456,
+      "JFEWG",
+      "Jack Dorsey",
+      "jack",
+      "Dorsey",
+      "Ruller",
+      "ADMIN",
+      "2022-01-02 13:00:00",
+      "2022-01-02 16:00:00",
+      "3 hours",
+      "OFFLINE"
+    ],
+    [
+      123456,
+      "FGJH8D",
+      "Evan Williams",
+      "ev",
+      "Williams",
+      "Turner",
+      "ADMIN",
+      "28/05/22",
+      "28/06/23",
+      "3:15",
+      "OFFLINE"
+      ],
+      [
+      2,
+      "def456",
+      "Samantha",
+      "sammy",
+      "Lee",
+      "Chen",
+      "User",
+      "2022-01-02 13:00:00",
+      "2022-01-02 16:00:00",
+      "3 hours",
+      "Inactive"
+      ],
+      [
+      3,
+      "ghi789",
+      "Michael",
+      "mike123",
+      "Wu",
+      "Gonzalez",
+      "Admin",
+      "2022-01-03 09:00:00",
+      "2022-01-03 18:00:00",
+      "9 hours",
+      "Active"
+      ],
+      [
+      4,
+      "jkl012",
+      "Jane",
+      "jane_doe",
+      "Smith",
+      "Wong",
+      "User",
+      "2022-01-04 10:00:00",
+      "2022-01-04 16:00:00",
+      "6 hours",
+      "Inactive"
+      ],
+      [
+      5,
+      "mno345",
+      "David",
+      "david123",
+      "Kim",
+      "Park",
+      "Admin",
+      "2022-01-05 11:00:00",
+      "2022-01-05 20:00:00",
+      "9 hours",
+      "Active"
+      ],
+      [
+      6,
+      "pqr678",
+      "Sophie",
+      "sophie_w",
+      "Lee",
+      "Chen",
+      "User",
+      "2022-01-06 13:00:00",
+      "2022-01-06 17:00:00",
+      "4 hours",
+      "Inactive"
+      ]
+  ]
+}
