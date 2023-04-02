@@ -1,4 +1,4 @@
-const API_URL = "./scripts/array.json";
+const API_URL = "http://localhost:8080/login/example";
 
 
 $(document).ready(function () {
@@ -6,3 +6,13 @@ $(document).ready(function () {
         ajax: API_URL,
     });
 });
+
+
+async function loadData() {
+    const res = await fetch(API_URL);
+    const data = await res.json();
+
+    console.log(data)
+}
+
+loadData();

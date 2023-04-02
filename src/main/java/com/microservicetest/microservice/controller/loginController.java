@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +17,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Scanner;
 
-@Controller
+@RestController
 @RequestMapping("/login")
 public class loginController {
 
@@ -42,10 +43,9 @@ public class loginController {
     }
 
     @GetMapping("/example")
-    public User example() throws FileNotFoundException {
+    public List<User> example() throws FileNotFoundException {
         List<User> listaUsuarios = readJSON();
-        User usuario = listaUsuarios.get(0);
-        return usuario;
+        return listaUsuarios;
     }
 
     @GetMapping("/hello")
