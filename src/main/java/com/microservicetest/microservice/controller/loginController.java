@@ -13,6 +13,7 @@ import java.io.FileNotFoundException;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 @CrossOrigin
 @RestController
@@ -39,15 +40,32 @@ public class loginController {
 
 
     }
-
-    @GetMapping("/example")
-    public List<User> example() throws FileNotFoundException {
+    @GetMapping("/data")
+    public List<User> data() throws FileNotFoundException {
         List<User> listaUsuarios = readJSON();
         return listaUsuarios;
     }
 
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Say Hello";
+
+    @GetMapping("/admin")
+    public List<User> admin() throws FileNotFoundException {
+        List<User> listaUsuarios = readJSON();
+        return listaUsuarios.stream().filter(p -> p.getUserType()==User.UserType.ADMIN).collect(Collectors.toList());
     }
+
+    @GetMapping("/promotor")
+    public List<User> promotor() throws FileNotFoundException {
+        List<User> listaUsuarios = readJSON();
+        return listaUsuarios.stream().filter(p -> p.getUserType()==User.UserType.PROMOTOR).collect(Collectors.toList());
+    }
+
+    @GetMapping("/agente")
+    public List<User> agente() throws FileNotFoundException {
+        List<User> listaUsuarios = readJSON();
+        return listaUsuarios.stream().filter(p -> p.getUserType()==User.UserType.AGENTE).collect(Collectors.toList());
+    }
+
+
+
+
 }

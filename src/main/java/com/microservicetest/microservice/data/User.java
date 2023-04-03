@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class User {
-    private String id;
+    private Long id;
     private String key;
     private String type;
     private String name;
@@ -59,11 +59,11 @@ public class User {
     // getters y setters: métodos que van a acceder a las variables, solo estos. Encapsulamiento
 
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
