@@ -47,6 +47,7 @@ public class login {
                 if (user.getPassword().equals(pass)){
                     RedirectView redict = new RedirectView();
                     redict.setUrl("/api/data");
+                    redict.addStaticAttribute("Success"," The Request was success!");
                     return redict;
                 }
             }
