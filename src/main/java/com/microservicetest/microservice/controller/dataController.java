@@ -6,7 +6,6 @@ import com.google.gson.reflect.TypeToken;
 import com.microservicetest.microservice.data.User;
 import com.microservicetest.microservice.utils.LocalDateAdapter;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
@@ -18,8 +17,8 @@ import java.util.stream.Collectors;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/login")
-public class loginController {
+@RequestMapping("/api")
+public class dataController {
 
 
     //Lectura de un Json.

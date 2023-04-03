@@ -6,6 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import com.microservicetest.microservice.data.User;
 import com.microservicetest.microservice.utils.LocalDateAdapter;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.File;
@@ -17,23 +18,42 @@ import java.util.Scanner;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/example")
-public class exampleController {
+@RequestMapping("/login")
+public class login {
+
+    //Testing with modelandview data
+//    @RequestMapping(value = "/test", method = RequestMethod.GET)
+//    public ModelAndView test(@RequestParam("user") String nickname, @RequestParam("pass") String pass) throws FileNotFoundException{
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("home");
+//        List<User> listaUsuarios = readJSON();
+//        for (User user : listaUsuarios){
+//            if(user.getUsername().equals(nickname)){
+//                if (user.getPassword().equals(pass)){
+//                    return modelAndView;
+//                }
+//            }
+//        }
+//        return new ModelAndView("http://localhost:8080/");
+//    }
 
 
     //Redirrecionador al comprobar las credenciales.
-    @GetMapping("/test")
+    @GetMapping("/session")
     public RedirectView test(@RequestParam("user") String nickname, @RequestParam("pass") String pass) throws FileNotFoundException{
         List<User> listaUsuarios = readJSON();
         for (User user : listaUsuarios){
             if(user.getUsername().equals(nickname)){
                 if (user.getPassword().equals(pass)){
-                    return new RedirectView("/login/data");
+                    RedirectView redict = new RedirectView();
+                    redict.setUrl("/home");
+                    return redict;
                 }
             }
         }
         return new RedirectView("http://localhost:8080/");
     }
+
 
     private List<User> readJSON() throws FileNotFoundException {
         String jsonString = "";
