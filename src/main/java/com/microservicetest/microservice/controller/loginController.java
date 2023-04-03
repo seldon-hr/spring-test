@@ -6,10 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import com.microservicetest.microservice.data.User;
 import com.microservicetest.microservice.utils.LocalDateAdapter;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,6 +14,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Scanner;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/login")
 public class loginController {
