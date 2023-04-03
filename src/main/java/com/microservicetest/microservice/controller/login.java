@@ -46,14 +46,17 @@ public class login {
             if(user.getUsername().equals(nickname)){
                 if (user.getPassword().equals(pass)){
                     RedirectView redict = new RedirectView();
-                    redict.setUrl("/home");
+                    redict.setUrl("/api/data");
                     return redict;
                 }
             }
         }
         return new RedirectView("http://localhost:8080/");
     }
-
+    @GetMapping("/home")
+    public String showPlantilla() {
+        return "home";
+    }
 
     private List<User> readJSON() throws FileNotFoundException {
         String jsonString = "";

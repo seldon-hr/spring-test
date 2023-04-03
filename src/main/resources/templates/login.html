@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <!-- Form -->
     <div class="container">
         <div class="row justify-content-center mt-5">
           <div class="col-md-6">
@@ -22,13 +22,13 @@
                 <form>
                   <div class="form-group">
                     <label for="usuario">User</label>
-                    <input type="text" class="form-control" id="usuario">
+                    <input type="text" class="form-control" id="username">
                   </div>
                   <div class="form-group">
                     <label for="contraseña">Password</label>
-                    <input type="password" class="form-control" id="contraseña">
+                    <input type="password" class="form-control" id="password">
                   </div>
-                  <button type="submit" class="btn btn-primary btn-block mt-4">Log in</button>
+                  <button type="submit" class="btn btn-primary btn-block mt-4" onclick="getAccess()">Log in</button>
                 </form>
               </div>
             </div>
