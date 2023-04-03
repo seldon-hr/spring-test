@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.microservicetest.microservice.data.User;
 import com.microservicetest.microservice.utils.LocalDateAdapter;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,9 +42,9 @@ public class loginController {
 
     }
     @GetMapping("/data")
-    public List<User> data() throws FileNotFoundException {
+    public ResponseEntity<List<User>> data() throws FileNotFoundException {
         List<User> listaUsuarios = readJSON();
-        return listaUsuarios;
+        return ResponseEntity.ok(listaUsuarios);
     }
 
 

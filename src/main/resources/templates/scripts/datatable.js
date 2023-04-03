@@ -1,5 +1,5 @@
-const API_URL = "https://api.thedogapi.com/v1/images/search";
-const URL = "http://localhost:8080/login/example";
+const API_URL = "http://localhost:8080/login/data";
+
 /* const done = API_URL.json(); */
 
 
@@ -12,7 +12,7 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
+/* $(document).ready(function () {
     $('#example').DataTable({
         initComplete: function () {
             this.api()
@@ -37,7 +37,7 @@ $(document).ready(function () {
                 });
         },
     });
-});
+}); */
 
 
 /* Tester of reaching the data */
