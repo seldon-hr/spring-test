@@ -5,8 +5,8 @@ function getAccess() {
     password = String(password);
     const url = "http://localhost:8080/login/session";
     const root = url+"?user=" +username+"&pass="+ encodeURIComponent(password);
-    debugger
-    console.log(password);
+    /* debugger
+    console.log(password); */
     console.log(root);
     fetch(root, {
         mode: 'no-cors'

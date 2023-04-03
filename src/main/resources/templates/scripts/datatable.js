@@ -1,6 +1,25 @@
-const API_URL = "http://localhost:8080/login/data";
+const URL = "http://localhost:8080/api/data";
 
 /* const done = API_URL.json(); */
+
+
+
+
+
+/* Tester of reaching the data */
+async function loadData(url) {
+    try {
+        const res = await fetch(url, {
+            mode: 'no-cors'
+        });
+        const data = await res.json();
+        console.log(data)
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+loadData(URL);
 
 
 
@@ -10,44 +29,3 @@ $(document).ready(function () {
         ajax: URL,
     });
 });
-
-
-/* $(document).ready(function () {
-    $('#example').DataTable({
-        initComplete: function () {
-            this.api()
-                .columns()
-                .every(function () {
-                    var column = this;
-                    var select = $('<select><option value=""></option></select>')
-                        .appendTo($(column.footer()).empty())
-                        .on('change', function () {
-                            var val = $.fn.dataTable.util.escapeRegex($(this).val());
- 
-                            column.search(val ? '^' + val + '$' : '', true, false).draw();
-                        });
- 
-                    column
-                        .data()
-                        .unique()
-                        .sort()
-                        .each(function (d, j) {
-                            select.append('<option value="' + d + '">' + d + '</option>');
-                        });
-                });
-        },
-    });
-}); */
-
-
-/* Tester of reaching the data */
-async function loadData() {
-    const res = await fetch(URL);
-    console.log(res);
-    const data = await res.json();
-
-    console.log(data)
-}
-
-loadData();
-
